@@ -72,3 +72,52 @@ favorite_num = 7
 message = "My favorite number is  " + str(favorite_num) + " or " + str(favorite_num*3)
 print(message)
 # without the str() method, you will get a typeError: can't convert 'int' object to str implicitly
+
+
+# additional features ##########################
+
+# raw string
+print('C:\some\name')
+print(r'C:\some\name')
+# adding the r before the string makes it a raw string and thus ignoring the \n
+
+print("\n")
+
+# span multiple lines
+print("""\
+Usage: things [OPTIONS]
+    -h header         Display this usage message
+    -H hostname       Chandan Thakur
+    -t test           prints in the exact format I write my code
+""")
+
+# string concatenation advanced
+print(3 * 'ha' + "! It's a joke :)")
+
+print('py' 'thon')
+
+# String index
+word = 'Charizard'
+print(word)
+print(word[0])
+print(word[-1])
+print(word[-4])
+
+# slicing
+print(word[2:5])
+print(word[2:])
+print(word[:7])
+print(word[:])
+# the starting number is always included and the ending is always omitted
+# this exist so s[:3] + s[3:] always equals s
+print(word[:4] + word[4:])
+# referring to position out of bound
+print(word[4:50] +"50")
+print(word[50:] +"50")
+# print(word[50])   This will throw an error
+
+print(len(word))
+
+# Strings are immutable
+print('Z' + word[1:])
+print(word)
